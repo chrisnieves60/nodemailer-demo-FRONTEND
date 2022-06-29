@@ -1,24 +1,19 @@
-import logo from './logo.svg';
-import './App.css';
 
+import './App.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import { Link } from 'react-router-dom';
+import { Fragment } from 'react';
 function App() {
+
+  //<>
+  //<Home></Home>
+  //</>
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <><h1>Login or signup!</h1><Fragment>
+      
+      <Link to="/Login"><h1>Login</h1></Link>
+      <Link to="/Signup"><h1>Signup</h1></Link>
+    </Fragment></>
   );
 }
 
