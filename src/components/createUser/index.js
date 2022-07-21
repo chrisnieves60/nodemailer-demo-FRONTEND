@@ -9,7 +9,7 @@ const[usernameSign, setUsernameSign] = useState("")
 const[passwordSign, setPasswordSign] = useState("")
 const[emailSign, setemailSign] = useState("")
 const [redirect, setRedirect] = useState(false) //redirect to main page
-
+document.body.style = 'background: green;'; //changes color
 
 const users = () => {
     Axios.post("http://localhost:5000/createUser" , {
@@ -18,6 +18,9 @@ password: passwordSign,
 email: emailSign
 }).then((response) => {
     console.log(response)
+    if(response.status==200){
+        setRedirect(true); 
+    }
 }).catch((error) => {
     console.log(error); 
 })
@@ -26,7 +29,7 @@ email: emailSign
 
 
 if (redirect) {
-    return (<Navigate to="/login"/>) //redirect to home upon correct login 
+   return (<Navigate to="/PleaseVerify"/>) //redirect to home upon correct login 
   }
 
 

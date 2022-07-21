@@ -8,6 +8,8 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Signup from "./components/createUser/index.js"
+import PleaseVerify from "./components/PleaseVerify/PleaseVerify.js";
+import Login from "./components/Login/index.js";
 
 ReactDOM.render(
   <React.StrictMode>
@@ -16,6 +18,8 @@ ReactDOM.render(
         <Routes>
           <Route path="/" element={<App />} />
           <Route path="/Signup" element={<Signup/>}/>
+          <Route path="/PleaseVerify" element={<PleaseVerify/>}/>
+          <Route path="/Login" element={<Login/>}/>
         </Routes>
     </BrowserRouter>
   </React.StrictMode>,
